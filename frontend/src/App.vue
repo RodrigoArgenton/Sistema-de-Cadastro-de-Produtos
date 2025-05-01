@@ -2,12 +2,14 @@
   import Navbar from '@/components/Navbar.vue'
 </script>
 <template>
-  <header>
-    <Navbar />
-  </header>
-  <v-main>
-    <router-view/>
-  </v-main>
+  <v-app>
+    <header>
+      <Navbar />
+    </header>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 <style scoped>
 
