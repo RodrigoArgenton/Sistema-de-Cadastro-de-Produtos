@@ -7,7 +7,9 @@ const uri = process.env.MONGO_URI as string
 
 export const connectToDatabase = async () => {
     try {
-        await mongoose.connect(uri)
+        await mongoose.connect(uri, {
+            dbName: 'PietaTech'
+        })
         console.log('Banco de dados conectado')
     }catch(err){
         console.error('Erro ao conectar no banco de dados', err)
