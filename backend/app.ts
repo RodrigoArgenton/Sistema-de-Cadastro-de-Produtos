@@ -1,6 +1,6 @@
 import express from 'express'
 import { connectToDatabase } from './database'
-import categoryRoutes from './src/routers/categoryRoutes'
+import categoryRoutes from './src/routers/categoryRouter'
 
 const app = express()
 app.use(express.json())
