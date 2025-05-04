@@ -87,6 +87,5 @@ onMounted(fetchCategories)
     </v-form>
     <v-btn class="me-4" @click="submitProduct">Enviar</v-btn>
     <v-btn @click="resetProduct">Limpar</v-btn>
-    <p>{{ product }}</p>
   </v-container>
 </template>
