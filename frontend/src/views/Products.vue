@@ -1,7 +1,4 @@
-<script lang="ts">
-    export default {
-        name: 'Products',
-    }
+<script lang="ts" setup>
 </script>
 <template>
     <h1>Products</h1>
