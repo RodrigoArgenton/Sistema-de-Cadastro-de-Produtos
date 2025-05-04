@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import { createProduct } from "../services/productService"
+import { getProducts } from "../services/productService"
 
 export const handleCreateProduct = async (req: Request, res: Response): Promise<any> => {
     const {name, description, categoryId} = req.body
@@ -13,4 +14,13 @@ export const handleCreateProduct = async (req: Request, res: Response): Promise<
             error: err
         })
     }
+}
+
+export const getProductsController = async (req: Request, res: Response) => {
+  try {
+    const data = await getProducts()
+    res.json(data)
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao buscar produtos' })
+  }
 }
