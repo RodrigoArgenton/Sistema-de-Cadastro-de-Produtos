@@ -4,3 +4,8 @@ export const createProduct = async (name: string, description: string, categoryI
     const product = new Product({name, description, categoryId})
     return await product.save()
 }
+
+export const getProducts = async () => {
+    const products = await Product.find().lean()
+    return products
+}
